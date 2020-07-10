@@ -22,8 +22,8 @@ var carDetails = {
 */
 
 //Code Here
-
-
+const {color} = carDetails;
+const {make, model, year} = carDetails;
 
 ////////// PROBLEM 2 //////////
 
@@ -35,7 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,7 +54,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const totalPopulation = object => {
+  const {utah, california, texas, arizona} = object;
+  return utah + california + texas + arizona;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -68,7 +71,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const ingredients = object => {
+  const {carb, fat, protein} = object;
+  let newArr = [];
+  newArr.push(carb, fat, protein);
+  return newArr;
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -86,7 +94,16 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+let largeNumbers = obj => {
+  const {first, second, third} = obj;
+  if (first < second && first < third) {
+    return first;
+  } else if (second < first && second < third) {
+    return second;
+  } else {
+    return third;
+  }
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +115,14 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+let numberGroups = obj => {
+  const {a, b, c} = obj;
+  if (a.length > b.length && a.length > c.length) {
+    return a
+  } else if (b.length > a.length && b.length > c.length){
+    return b
+  } else {
+    return c
+  }
+}
 
